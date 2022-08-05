@@ -701,9 +701,13 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(1) rotate(360deg);
+	transition: transform 500ms var(--timing-function);
 }
 
+.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(0.5);
+}
 .modal-close {
 	position: absolute;
 	top: 8px;
